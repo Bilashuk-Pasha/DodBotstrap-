@@ -65,12 +65,14 @@
   box-shadow: @shadow;
 }
 
+
 //Border-radius
 .border-radius(@radius){
   -webkit-border-radius: @radius;
   border-radius: @radius;
   background-clip: padding-box;
 }
+
 
 //Flexbox module
 .flexbox{
@@ -113,6 +115,7 @@
   flex-wrap: @wrap;
 }
 
+
 //Animations
 .animation(@arguments) {
   -webkit-animation: @arguments;
@@ -129,3 +132,54 @@
 @mobile_xs:      ~"screen and (max-width: 480px) and (min-width: 320px)";
 @mobile_sm: ~"screen and (max-width: 576px) and (min-width: 540px)";
 @mobile_sm_0:   ~"screen and (max-width: 576px) and (min-width: 0)";
+
+
+//Colums-концепция многоколоночной разметки.
+.columns(@colum-width, @colum-couts) {
+  -webkit-columns: @colum-width @colum-couts;
+  -moz-columns: @colum-width @colum-couts;
+  columns: @colum-width @colum-couts;
+}
+.column-rule(@rule-width, @rule-style, @rule-color) {
+  -webkit-column-rule: @rule-width @rule-style @rule-color;
+  -moz-column-rule: @rule-width @rule-style @rule-color;
+  column-rule: @rule-width @rule-style @rule-color;
+}
+.column-count(@number-cout) {
+  -webkit-column-count: @number-cout;
+  -moz-column-count: @number-cout;
+  column-count: @number-cout;
+}
+.column-width(@column-width) {
+  -webkit-column-width: @column-width;
+  -moz-column-width: @column-width;
+  column-width: @column-width;
+}
+.column-gap(@number-gap) {
+  -webkit-column-gap: @number-gap;
+  -moz-column-gap: @number-gap;
+  column-gap: @number-gap;
+}
+.column-span(@number-span) {
+  -webkit-column-span: @number-span;
+  -moz-column-span: @number-span;
+  column-span: @number-span;
+}
+.column-rule-style(@column-rule-style) {
+  -webkit-column-rule-style: @column-rule-style;
+  -moz-column-rule-style: @column-rule-style;
+  column-rule-style: @column-rule-style;
+}
+.column-rule-width(@column-rule-width, @column-rul-style) {
+  -webkit-column-rule-width: @column-rule-width;
+  -moz-column-rule-width: @column-rule-width;
+  column-rule-width: @column-rule-width;
+  -webkit-column-rule-style: @column-rul-style;
+  -moz-column-rule-style: @column-rul-style;
+  column-rule-style: @column-rul-style;
+}
+.column-rule-color(@column-rule-color) {
+  -webkit-column-rule-color: @column-rule-color;
+  -moz-column-rule-color: @column-rule-color;
+  column-rule-color: @column-rule-color;
+}
